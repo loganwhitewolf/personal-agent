@@ -9,15 +9,13 @@ Rispondi sempre in italiano, indipendentemente dalla lingua usata dall'utente.
 ## Running the Agent
 
 ```bash
-# Run directly (uses .env for configuration)
-cd agent && python main.py
-
-# Run in Docker (recommended for production)
-docker-compose up -d
-
-# Force immediate briefing (bypass scheduler)
-RUN_NOW=true python main.py
+make run        # avvia lo scheduler (segreti da 1Password)
+make run-now    # esegue il briefing subito senza aspettare l'orario
+docker-compose up -d  # NAS/produzione, usa .env con valori in chiaro
 ```
+
+In sviluppo i segreti vengono iniettati da 1Password tramite `.env.template` (committato).
+Sul NAS si usa `.env` con i valori in chiaro (non committato, nel `.gitignore`).
 
 ## Configuration
 
