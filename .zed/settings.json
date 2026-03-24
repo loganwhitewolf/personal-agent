@@ -1,0 +1,11 @@
+{
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python": {
+          "pythonPath": "./agent/.venv/bin/python"
+        }
+      }
+    }
+  }
+}

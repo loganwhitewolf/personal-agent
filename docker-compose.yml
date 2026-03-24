@@ -1,0 +1,15 @@
+services:
+  morning-agent:
+    build: ./agent
+    container_name: morning-agent
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/data
+    environment:
+      - DATA_PATH=/data
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
