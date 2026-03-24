@@ -136,6 +136,9 @@ celerybeat.pid
 
 # Environments
 .env
+
+# Dati runtime (generati dall'agente, non da versionare)
+data/
 .envrc
 .venv
 env/
